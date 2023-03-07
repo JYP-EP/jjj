@@ -1,0 +1,143 @@
+﻿<Window x:Class="节拍器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:节拍器"
+        mc:Ignorable="d"
+        Title="正经の节拍器" Height="430" Width="802" Cursor="Hand" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="style_btn" TargetType="Button">
+            <Setter Property="Foreground" Value="#eef7f2"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="99.76">
+                                <TextBlock Text="{TemplateBinding Button.Content}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"></Setter>
+                            </Trigger>
+                            <!--<Trigger Property="Opacity" Value="0.8"></Trigger>-->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/1670488053051.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="655*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Border CornerRadius="100" Background="Red"  Width="100" Height="100" Margin="309,175,275,175">
+
+        
+            <StackPanel ></StackPanel>
+        </Border>-->
+        <!--Style="{DynamicResource btnStartstyle}" #FF5AE05A  #FFFF8080-->
+        <Button x:Name="btnStart" Style="{StaticResource style_btn}" Content="开始"  Click="btnStart_Click" Background="#229453" FontSize="18" Margin="284,292,271,18" Grid.Column="1" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"></Setter>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <TextBox x:Name="S1" Margin="63,252,0,0" TextWrapping="Wrap" Text="" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" IsReadOnly="True" Cursor="Hand">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <!--#fcc307-->
+                    <Setter Property="Background" Value="#41ae3c"></Setter>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF41AE3C" Opacity="0.8"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="S2" Margin="203,252,0,0" TextWrapping="Wrap" Text="" Width="120" RenderTransformOrigin="1.018,0.241" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" IsReadOnly="True" Cursor="Hand">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <!--#fcc307-->
+                    <Setter Property="Background" Value="#41ae3c"></Setter>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF41AE3C" Opacity="0.8"/>
+            </TextBox.Background>
+
+        </TextBox>
+        <TextBox x:Name="S3" Margin="343,252,0,0" TextWrapping="Wrap" Text="" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" IsReadOnly="True" Cursor="Hand">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <!--#fcc307-->
+                    <Setter Property="Background" Value="#41ae3c"></Setter>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF41AE3C" Opacity="0.8"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="S4" Margin="483,252,0,0" TextWrapping="Wrap" Text="" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" BorderThickness="0,1,1,1" IsReadOnly="True" Cursor="Hand">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <!--#fcc307-->
+                    <Setter Property="Background" Value="#41ae3c"></Setter>
+                    <!--<Setter Property="BorderBrush" Value="#41ae3c"></Setter>-->
+                    <!--<Setter Property="CornerRadius" Value="5"></Setter>-->
+                    <!--<Setter Property="CornerRadius" Value="100"></Setter>-->
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF41AE3C" Opacity="0.8"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="Lablist" Content="三点几啦!爬格子先~" FontSize="30" Foreground="#8fb2c9"  HorizontalAlignment="Left" Margin="194,33,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="Labsudu" Content="节拍速度:" FontSize="16" Foreground="#EAE7C1"  HorizontalAlignment="Left" Margin="51,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.891,0.441" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextSudu" Foreground="#eef7f2" HorizontalAlignment="Left" Margin="68,117,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="60" Height="24" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="TextSudu_TextChanged" Grid.Column="1">
+            <TextBox.Background>
+                <ImageBrush Opacity="1"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="Labsudu_1" Content="目标速度:" FontSize="16" Foreground="#EAE7C1"  HorizontalAlignment="Left" Margin="51,176,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextSudu_1" Foreground="#eef7f2" HorizontalAlignment="Left" Margin="67,179,0,0" TextWrapping="Wrap" Text="240" VerticalAlignment="Top" Width="60" Height="24" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" TextChanged="TextSudu_1_TextChanged" >
+            <TextBox.Background>
+                <ImageBrush Opacity="1"/>
+            </TextBox.Background>
+        </TextBox>
+        <GroupBox Header="变速设置" Margin="25,151,25,168" Panel.ZIndex="-1" FontSize="14" Foreground="#e6d2d5" Grid.ColumnSpan="3" BorderBrush="#FFEBBB7A">
+            <GroupBox.Background>
+                <ImageBrush/>
+            </GroupBox.Background>
+        </GroupBox>
+        <Label x:Name="Labsudu_2" Content="增加速度:" FontSize="16" Foreground="#EAE7C1"  HorizontalAlignment="Left" Margin="151,176,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="TextSudu_2" Foreground="#eef7f2" HorizontalAlignment="Left" Margin="234,179,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="60" Height="24" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" >
+            <TextBox.Background>
+                <ImageBrush Opacity="1"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="Labsection" Content="增速小节数:" FontSize="16" Foreground="#EAE7C1"  HorizontalAlignment="Left" Margin="313,176,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="Textsection" Foreground="#eef7f2" HorizontalAlignment="Left" Margin="412,179,0,0" TextWrapping="Wrap" Text="108" VerticalAlignment="Top" Width="60" Height="24" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="Textsection_TextChanged" Grid.Column="1">
+            <TextBox.Background>
+                <ImageBrush Opacity="1"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="Labtalsection" Content="总小节数:" FontSize="16" Foreground="#EAE7C1"  HorizontalAlignment="Left" Margin="498,176,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="Texttalsection" Foreground="#eef7f2" HorizontalAlignment="Left" Margin="581,179,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="60" Height="24" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" >
+            <TextBox.Background>
+                <ImageBrush Opacity="1"/>
+            </TextBox.Background>
+        </TextBox>
+
+    </Grid>
+</Window>

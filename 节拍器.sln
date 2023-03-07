@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "节拍器", "节拍器\节拍器.csproj", "{1B660B3A-FD04-45BC-B4C6-C22174CC9FCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B660B3A-FD04-45BC-B4C6-C22174CC9FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B660B3A-FD04-45BC-B4C6-C22174CC9FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B660B3A-FD04-45BC-B4C6-C22174CC9FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B660B3A-FD04-45BC-B4C6-C22174CC9FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4901B166-20A4-408F-9B6B-9A31C2D555DB}
+	EndGlobalSection
+EndGlobal
